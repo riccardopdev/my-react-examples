@@ -1,0 +1,29 @@
+.controlContainer {
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+
+  .control {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+  }
+
+  .dayControl {
+    color: aliceblue;
+    background-color: #5a781d;
+  }
+
+  .monthControl {
+    color: aliceblue;
+    background-color: #146dc3;
+  }
+
+  .yearControl {
+    color: aliceblue;
+    background-color: darkslategray;
+  }
+}
