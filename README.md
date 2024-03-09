@@ -12,4 +12,5 @@ To explore any of the examples in this repository, simply navigate to the corres
 
 ## List of content
 
-- **context**: This project demonstrates the implementation of React context using TypeScript.
+- **context**: This project demonstrates the implementation of React's context using TypeScript.
+- **context-reducer**: This project demonstrate the implementation and integration of React's context and reducer.
