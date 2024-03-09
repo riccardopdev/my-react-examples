@@ -20,7 +20,7 @@ The project showcases a user interface (UI) designed to display both the current
 
 3. **DateControls Component**:
 
-- The `DateControls` component is consumes the Context and provides controls to update the `selectedDate` object using the Reducer's `dispatch` method.
+- The `DateControls` component consumes the Context and provides controls to update the `selectedDate` object using the Reducer's `dispatch` method.
 
 ## Data Managed by state:
 
