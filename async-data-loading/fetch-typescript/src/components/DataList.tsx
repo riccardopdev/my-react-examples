@@ -1,12 +1,28 @@
 import { useState, useEffect } from 'react';
 
-const usersUrl: string = 'http://jsonplaceholder.typicode.com/users';
+const url: string = 'http://jsonplaceholder.typicode.com/';
+let dataType: string = 'users';
 
-type UserType = {
+type DataItem = {
   id: number;
+};
+
+type UserType = DataItem & {
   name: string;
   email: string;
 };
+
+type PostType = DataItem & {
+  title: string;
+  body: string;
+};
+
+type PhotoType = DataItem & {
+  title: string;
+  thumbnailUrl: string;
+};
+
+type DataArray = (UserType | PostType | PhotoType)[];
 
 type ErrorType = {
   error: boolean;
@@ -14,17 +30,22 @@ type ErrorType = {
 };
 
 const DataList = () => {
-  const [data, setData] = useState<UserType[]>([]);
+  const [data, setData] = useState<DataArray>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<ErrorType>({ error: false, message: '' });
 
   useEffect(() => {
-    setLoading(true);
-    loadData();
+    loadData('users');
   }, []);
 
-  const loadData = async () => {
-    await fetch(usersUrl)
+  const loadData = async (dataEndpoint: string) => {
+    dataType = dataEndpoint;
+
+    setLoading(true);
+    setLoading(true);
+    setData([]);
+
+    await fetch(url + dataEndpoint)
       .then((response) => {
         if (response.status === 200) {
           return response.json();
@@ -50,24 +71,65 @@ const DataList = () => {
       });
   };
 
-  const renderUserList = () => {
-    return data.map((user) => {
-      return (
-        <li key={user.id}>
-          <p>Name: {user.name}</p>
-          <p>Email: {user.email}</p>
-          <hr />
-        </li>
-      );
+  const renderDataList = () => {
+    return data.map((item) => {
+      switch (dataType) {
+        case 'users':
+          if ('name' in item && 'email' in item) {
+            const user = item as UserType;
+            return (
+              <div key={user.id}>
+                <p>Name: {user.name}</p>
+                <p>Email: {user.email}</p>
+                <hr />
+              </div>
+            );
+          }
+          break;
+        case 'posts':
+          if ('title' in item && 'body' in item) {
+            const post = item as PostType;
+            return (
+              <div key={post.id}>
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+                <hr />
+              </div>
+            );
+          }
+          break;
+        case 'photos':
+          if ('title' in item && 'thumbnailUrl' in item) {
+            const photo = item as PhotoType;
+            return (
+              <div key={photo.id}>
+                <h3>{photo.title}</h3>
+                <img
+                  width="150"
+                  height="150"
+                  alt={photo.title}
+                  src={photo.thumbnailUrl}
+                />
+              </div>
+            );
+            break;
+          }
+          break;
+        default:
+          throw new Error('Wrong data type');
+      }
     });
   };
 
   return (
     <section>
-      <h1>List of users</h1>
-      {loading === true ? <h2>Loading users...</h2> : null}
+      <button onClick={() => loadData('users')}>Load users</button>
+      <button onClick={() => loadData('posts')}>Load posts</button>
+      <button onClick={() => loadData('photos')}>Load photos</button>
+      <h1>List of {dataType}</h1>
+      {loading === true ? <h2>Loading {dataType}...</h2> : null}
       {error.error === true ? <h2>{error.message}</h2> : null}
-      {data.length > 0 ? <ul>{renderUserList()}</ul> : null}
+      {data.length > 0 ? renderDataList() : null}
     </section>
   );
 };

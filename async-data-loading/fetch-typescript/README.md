@@ -2,11 +2,11 @@
 
 ## Objective:
 
-The objective of this project is to demonstrate the implementation of asynchronous data loading in a React application using the `fetch` API and TypeScript. The project utilizes the jsonplaceholder endpoint [http://jsonplaceholder.typicode.com/users](http://jsonplaceholder.typicode.com/users) to retrieve an array of user objects.
+The objective of this project is to demonstrate the implementation of asynchronous data loading in a React application using the `fetch` API and TypeScript. The project utilizes the three jsonplaceholder [http://jsonplaceholder.typicode.com/](http://jsonplaceholder.typicode.com/) endpoints (users, posts, photos) to retrieve an array of objects.
 
-Specifically, this project showcases how to manage three different pieces of state and their corresponding state setters to track the loading progress and status:
+Specifically, this project showcases how to manage three different pieces of state and their corresponding state setters to track the loading progress and status of each endpoint:
 
-- `data`: An array of user objects.
+- `data`: An array of objects (users, posts, photos).
 - `loading`: A boolean value indicating whether data is being loaded.
 - `error`: An object containing a boolean value and a string message to indicate if an error occurred during the loading process.
 
@@ -16,7 +16,7 @@ The JavaScript `fetch` API is utilized with the `then` and `catch` methods to ma
 
 1. **DataList Component**:
 
-- The `DataList` component serves as the main data loading component. It is responsible for displaying loading and error messages, as well as the list of users.
+- The `DataList` component serves as the main data loading component. It is responsible for displaying loading and error messages, as well as the list of users, posts, and photos.
 - This component manages the state of `data`, `error`, and `loading`.
 
 ## Usage:
