@@ -2,7 +2,7 @@
 
 ## Objective:
 
-The objective of this project is to demonstrate the implementation of asynchronous data loading in a React application using the `fetch` API and TypeScript. The project utilizes the three jsonplaceholder [http://jsonplaceholder.typicode.com/](http://jsonplaceholder.typicode.com/) endpoints (users, posts, photos) to retrieve an array of objects.
+The objective of this project is to demonstrate the implementation of asynchronous data loading in a React application using the `fetch` API and TypeScript. The project utilizes three jsonplaceholder endpoints [http://jsonplaceholder.typicode.com/](http://jsonplaceholder.typicode.com/) (users, posts, photos) to retrieve an array of objects.
 
 Specifically, this project showcases how to manage three different pieces of state and their corresponding state setters to track the loading progress and status of each endpoint:
 
