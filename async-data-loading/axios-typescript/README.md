@@ -1,4 +1,4 @@
-# Async Data Loading Using Fetch and TypeScript
+# Async Data Loading Using Axios and TypeScript
 
 ## Objective:
 
