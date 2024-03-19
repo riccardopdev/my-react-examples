@@ -4,21 +4,21 @@ const url: string = 'http://jsonplaceholder.typicode.com/';
 //dataType is used to reference which type of list and data needs to be rendered
 let dataType: string = 'users';
 
-type DataItem = {
+type DataItemType = {
   id: number;
 };
 
-type UserType = DataItem & {
+type UserType = DataItemType & {
   name: string;
   email: string;
 };
 
-type PostType = DataItem & {
+type PostType = DataItemType & {
   title: string;
   body: string;
 };
 
-type PhotoType = DataItem & {
+type PhotoType = DataItemType & {
   title: string;
   thumbnailUrl: string;
 };
