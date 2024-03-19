@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const url: string = 'http://jsonplaceholder.typicode.com/';
+//dataType is used to reference which type of list and data needs to be rendered
 let dataType: string = 'users';
 
 type DataItem = {
@@ -40,18 +41,21 @@ const DataList = () => {
   }, []);
 
   const loadData = async (dataEndpoint: string) => {
+    //dataType is used to reference which type of list and data needs to be rendered
     dataType = dataEndpoint;
 
+    //Reset the error and loading state before loading
     setError((prevState) => ({
       ...prevState,
       error: false,
       message: '',
     }));
     setLoading(true);
-    setData([]);
+
+    console.log(data);
 
     await axios
-      .get(url + dataEndpoint)
+      .get(url + dataEndpoint + '?_limit=10')
       .then((response) => {
         if (response.status === 200) {
           setError((prevState) => ({
