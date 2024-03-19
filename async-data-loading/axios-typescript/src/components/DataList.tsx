@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 const url: string = 'http://jsonplaceholder.typicode.com/';
@@ -36,12 +36,7 @@ const DataList = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<ErrorType>({ error: false, message: '' });
 
-  useEffect(() => {
-    loadData('users');
-  }, []);
-
-  const loadData = async (dataEndpoint: string) => {
-    //dataType is used to reference which type of list and data needs to be rendered
+  const loadData = useCallback(async (dataEndpoint: string) => {
     dataType = dataEndpoint;
 
     //Reset the error and loading state before loading
@@ -51,8 +46,6 @@ const DataList = () => {
       message: '',
     }));
     setLoading(true);
-
-    console.log(data);
 
     await axios
       .get(url + dataEndpoint + '?_limit=10')
@@ -80,7 +73,11 @@ const DataList = () => {
         setLoading(false);
         setData([]);
       });
-  };
+  }, []);
+
+  useEffect(() => {
+    loadData('users');
+  }, [loadData]);
 
   const renderDataList = () => {
     return data.map((item) => {
