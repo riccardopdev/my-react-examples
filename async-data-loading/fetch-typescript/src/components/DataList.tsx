@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const url: string = 'http://jsonplaceholder.typicode.com/';
+//dataType is used to reference which type of list and data needs to be rendered
 let dataType: string = 'users';
 
 type DataItem = {
@@ -34,12 +35,7 @@ const DataList = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<ErrorType>({ error: false, message: '' });
 
-  useEffect(() => {
-    loadData('users');
-  }, []);
-
-  const loadData = async (dataEndpoint: string) => {
-    //dataType is used to reference which type of list and data needs to be rendered
+  const loadData = useCallback(async (dataEndpoint: string) => {
     dataType = dataEndpoint;
 
     //Reset the error and loading state before loading
@@ -74,7 +70,11 @@ const DataList = () => {
         setLoading(false);
         setData([]);
       });
-  };
+  }, []);
+
+  useEffect(() => {
+    loadData('users');
+  }, [loadData]);
 
   const renderDataList = () => {
     return data.map((item) => {
