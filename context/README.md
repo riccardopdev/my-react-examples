@@ -43,6 +43,16 @@ The project showcases a user interface (UI) designed to display both the current
 - Utilize TypeScript for type safety and to define the types of the date objects.
 - Test the functionality of the components to ensure proper interaction and state management.
 
+## Usage:
+
+This project is built with Vite.
+To use this project, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Run the project using `npm run dev`.
+4. Open your web browser and navigate to the localhost url displayed in your terminal.
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
