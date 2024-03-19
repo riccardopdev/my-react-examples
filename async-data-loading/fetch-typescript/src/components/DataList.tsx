@@ -41,9 +41,13 @@ const DataList = () => {
   const loadData = async (dataEndpoint: string) => {
     dataType = dataEndpoint;
 
+    //Reset the error and loading state before loading
+    setError((prevState) => ({
+      ...prevState,
+      error: false,
+      message: '',
+    }));
     setLoading(true);
-    setLoading(true);
-    setData([]);
 
     await fetch(url + dataEndpoint)
       .then((response) => {
