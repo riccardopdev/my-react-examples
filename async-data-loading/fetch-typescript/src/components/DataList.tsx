@@ -39,6 +39,7 @@ const DataList = () => {
   }, []);
 
   const loadData = async (dataEndpoint: string) => {
+    //dataType is used to reference which type of list and data needs to be rendered
     dataType = dataEndpoint;
 
     //Reset the error and loading state before loading
@@ -49,7 +50,7 @@ const DataList = () => {
     }));
     setLoading(true);
 
-    await fetch(url + dataEndpoint)
+    await fetch(url + dataEndpoint + '?_limit=10')
       .then((response) => {
         if (response.status === 200) {
           return response.json();
@@ -116,7 +117,6 @@ const DataList = () => {
                 />
               </div>
             );
-            break;
           }
           break;
         default:
