@@ -14,6 +14,7 @@ To explore any of the examples in this repository, simply navigate to the corres
 
 - **async-data-loading**: This folder contains a series of projects that showcase asynchronous data loading and the management of loading progress, error messages, and data display.
   - **axios-typescript**: This project uses the `axios` library and TypeScript to load data and manage loading progress and error messages.
+  - **fetch-redux**: This project uses the `fetch` API to load data, and the `Redux` library to manage the state for tracking loading progress, errors, and data.
   - **fetch-typescript**: This project uses the JavaScript `fetch` API and TypeScript to load data and manage loading progress and error messages.
 - **context**: This project demonstrates the implementation of React's context using TypeScript.
 - **context-reducer**: This project demonstrate the implementation and integration of React's context and reducer using TypeScript.
