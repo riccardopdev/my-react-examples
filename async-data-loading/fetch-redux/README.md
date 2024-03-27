@@ -17,7 +17,7 @@ The JavaScript `fetch` API is utilized with the `then` and `catch` methods to `d
 1. **DataList Component**:
 
 - The `DataList` component serves as the main data loading component. It is responsible for displaying loading and error messages, as well as the list of users, posts, and photos.
-- This component manages the state of `data`, `error`, and `loading`.
+- This component is responsible to `dispatch` the actions to manage the state of `data`, `error`, and `loading`.
 
 2. **Redux Store**:
 
