@@ -1,0 +1,159 @@
+@import './StyleVars.css';
+
+/* :root {
+  font-size: 62.5%;
+} */
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: 0;
+  column-gap: 0;
+  row-gap: calc(6 * var(--spacing-unit));
+}
+
+.gridItem {
+  grid-column: span 12;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    gap: calc(6 * var(--spacing-unit));
+  }
+
+  .grid-xs-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-xs-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-xs-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-xs-span12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-s-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-s-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-s-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-s-span12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-m-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-m-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-m-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-m-span12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid-l-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-l-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-l-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-l-span12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1600px) {
+  .grid-xl-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-xl-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-xl-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-xl-span12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1800px) {
+  .grid-xxl-span3 {
+    grid-column: span 3;
+  }
+
+  .grid-xxl-span4 {
+    grid-column: span 4;
+  }
+
+  .grid-xxl-span6 {
+    grid-column: span 6;
+  }
+
+  .grid-xxl-span12 {
+    grid-column: span 12;
+  }
+}

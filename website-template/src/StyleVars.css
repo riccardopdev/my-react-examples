@@ -1,0 +1,7 @@
+:root {
+  --dark-bg: 2, 53, 53;
+  --medium-bg: 1, 89, 88;
+  --light-bg: 0, 143, 140;
+
+  --spacing-unit: 8px;
+}

@@ -1,0 +1,16 @@
+.nav {
+  background-color: rgb(var(--dark-bg));
+  color: #fff;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.nav a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.ul {
+  padding: calc(var(--spacing-unit) * 3);
+  display: flex;
+  justify-content: space-around;
+}
