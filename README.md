@@ -8,7 +8,7 @@ In this repository, you'll find a variety of React examples covering different c
 
 ## Getting Started
 
-To explore any of the examples in this repository, simply navigate to the corresponding directory and follow the instructions provided in the README.md file within that directory.
+To explore any of the examples in this repository, simply navigate to the corresponding directory and follow the instructions provided in the **README.md** file within that directory.
 
 ## List of content
 
@@ -18,3 +18,4 @@ To explore any of the examples in this repository, simply navigate to the corres
   - **fetch-typescript**: This project uses the JavaScript `fetch` API and TypeScript to load data and manage loading progress and error messages.
 - **context**: This project demonstrates the implementation of React's context using TypeScript.
 - **context-reducer**: This project demonstrate the implementation and integration of React's context and reducer using TypeScript.
+- **website-template**: This project demonstrate the structure and implementation of a typical React website built with TypeScript, using `react-router-dom` to manage routes, and a combination of React's reducer and context to manage the state. The website uses the JSONplaceholder API to process data requests. Styling is implemented using CSS modules for each component as well a global CSS reset, common styles, and CSS variables.
