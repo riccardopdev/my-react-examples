@@ -66,39 +66,51 @@ const CreatePost = () => {
 
   return (
     <main>
-      <h2>Create new post</h2>
-      <form onSubmit={submitPost}>
-        <div>
-          <label htmlFor="postTitle">Post Title</label>
-          <input
-            id="postTitle"
-            type="text"
-            ref={postTitle}
-            defaultValue={'Title of the post'}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="postBody">Post Body</label>
-          <textarea
-            id="postBody"
-            ref={postBody}
-            defaultValue={'Some text for the post body.'}
-          ></textarea>
-        </div>
-        <div>
-          <label htmlFor="postUserId">User ID</label>
-          <input
-            id="postUserId"
-            type="number"
-            ref={postUserId}
-            defaultValue={20}
-          ></input>
-        </div>
-        <button>Submit Post</button>
-      </form>
+      <section>
+        <h1>Create new post</h1>
+        <p>
+          A page with a form to submit a new post to
+          https://jsonplaceholder.typicode.com/posts.
+        </p>
+      </section>
+      <section>
+        <form onSubmit={submitPost}>
+          <div>
+            <label htmlFor="postTitle">Post Title</label>
+            <input
+              id="postTitle"
+              type="text"
+              ref={postTitle}
+              defaultValue={'Title of the post'}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="postBody">Post Body</label>
+            <textarea
+              id="postBody"
+              ref={postBody}
+              defaultValue={'Some text for the post body.'}
+            ></textarea>
+          </div>
+          <div>
+            <label htmlFor="postUserId">User ID</label>
+            <input
+              id="postUserId"
+              type="number"
+              ref={postUserId}
+              defaultValue={20}
+            ></input>
+          </div>
+          <button type="submit">Submit Post</button>
+        </form>
+      </section>
       {loading ? <Loading message="Submitting post..." /> : null}
       {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}
-      {postCreated ? <p>Post successfully created!</p> : null}
+      {postCreated ? (
+        <section>
+          <h3>Post successfully created!</h3>
+        </section>
+      ) : null}
     </main>
   );
 };

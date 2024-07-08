@@ -63,6 +63,13 @@ const TodosPage = () => {
 
   return (
     <main>
+      <section>
+        <h1>Todos</h1>
+        <p>
+          A page loading a feed of todos from
+          https://jsonplaceholder.typicode.com/todos.
+        </p>
+      </section>
       <section className="grid">
         {loading ? <Loading /> : null}
         {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}

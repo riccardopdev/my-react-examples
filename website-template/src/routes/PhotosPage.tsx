@@ -64,6 +64,13 @@ const PhotosPage = () => {
 
   return (
     <main>
+      <section>
+        <h1>Photos</h1>
+        <p>
+          A page loading a feed of photos from
+          https://jsonplaceholder.typicode.com/photos.
+        </p>
+      </section>
       <section className="grid">
         {loading ? <Loading message="Loading photos..." /> : null}
         {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}

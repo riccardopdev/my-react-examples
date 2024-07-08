@@ -63,6 +63,13 @@ const PostsPage = () => {
 
   return (
     <main>
+      <section>
+        <h1>Posts</h1>
+        <p>
+          A page loading a feed of posts from
+          https://jsonplaceholder.typicode.com/posts.
+        </p>
+      </section>
       <section className="grid">
         {loading ? <Loading message="Loading posts..." /> : null}
         {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}
