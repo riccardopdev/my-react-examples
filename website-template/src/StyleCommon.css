@@ -78,10 +78,14 @@ label {
   font-family: var(--body-font);
   font-weight: 800;
   margin-bottom: var(--spacing-unit);
+  color: rgb(var(--secondary-dark-col));
 }
 
 input,
 textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-unit);
   margin-bottom: calc(var(--spacing-unit) * 2);
 }
 

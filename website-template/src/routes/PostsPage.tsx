@@ -49,6 +49,7 @@ const PostsPage = () => {
     return state.posts.map((post) => {
       return (
         <Post
+          key={post.id}
           id={post.id}
           title={post.title}
           body={post.body}
