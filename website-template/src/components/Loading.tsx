@@ -1,5 +1,9 @@
 const Loading = ({ message = 'Loading...' }: LoadingProps) => {
-  return <h2>{message}</h2>;
+  return (
+    <section>
+      <h3>{message}</h3>
+    </section>
+  );
 };
 
 type LoadingProps = {

@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext, useCallback } from 'react';
 import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
 import Post from '../components/Post';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
@@ -64,7 +65,7 @@ const PostsPage = () => {
     <main>
       <section className="grid">
         {loading ? <Loading message="Loading posts..." /> : null}
-        {error.isError ? <p>{error.errorMsg}</p> : null}
+        {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}
         {state.posts.length > 0 ? renderPosts() : null}
       </section>
     </main>

@@ -3,6 +3,7 @@ import Loading from '../components/Loading';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
+import ErrorMessage from '../components/ErrorMessage';
 
 const TodosPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -39,6 +40,8 @@ const TodosPage = () => {
 
   useEffect(() => {
     if (state.todos.length <= 0) {
+      setLoading(true);
+      setError({ isError: false, errorMsg: '' });
       loadTodos();
     }
   }, [loadTodos, state.todos]);
@@ -58,7 +61,7 @@ const TodosPage = () => {
     <main>
       <section className="grid">
         {loading ? <Loading /> : null}
-        {error.isError ? <p>{error.errorMsg}</p> : null}
+        {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}
         {state.todos.length > 0 ? renderTodos() : null}
       </section>
     </main>

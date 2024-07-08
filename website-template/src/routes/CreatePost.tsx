@@ -1,6 +1,7 @@
 import { FormEvent, useRef, useState } from 'react';
-import { ErrorType } from '../types/ErrorType';
 import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
+import { ErrorType } from '../types/ErrorType';
 
 const CreatePost = () => {
   const postTitle = useRef<HTMLInputElement>(null);
@@ -96,7 +97,7 @@ const CreatePost = () => {
         <button>Submit Post</button>
       </form>
       {loading ? <Loading message="Submitting post..." /> : null}
-      {error.isError ? <p>{error.errorMsg}</p> : null}
+      {error.isError ? <ErrorMessage message={error.errorMsg} /> : null}
       {postCreated ? <p>Post successfully created!</p> : null}
     </main>
   );
