@@ -4,6 +4,7 @@ import ErrorMessage from '../components/ErrorMessage';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from './../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
+import Photo from '../components/Photo';
 
 const PhotosPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -49,13 +50,14 @@ const PhotosPage = () => {
   const renderPhotos = () => {
     return state.photos.map((photo) => {
       return (
-        <article
+        <Photo
           key={photo.id}
-          className="gridItem grid-s-span6 grid-xxl-span4"
-        >
-          <h2>{photo.title}</h2>
-          <img src={photo.thumbnailUrl} alt={photo.title} />
-        </article>
+          albumId={photo.albumId}
+          id={photo.id}
+          title={photo.title}
+          url={photo.url}
+          thumbnailUrl={photo.thumbnailUrl}
+        />
       );
     });
   };
