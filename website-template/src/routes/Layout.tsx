@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
 import reducer from '../reducer/DataReducer';
 import { AppState } from '../state/AppState';
+import Footer from '../components/Footer';
 
 const Layout = () => {
   const [state, dispatch] = useReducer(reducer, AppState);
@@ -13,6 +14,7 @@ const Layout = () => {
       <DataContext.Provider value={{ state, dispatch }}>
         <Navigation />
         <Outlet />
+        <Footer />
       </DataContext.Provider>
     </>
   );

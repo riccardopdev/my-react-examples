@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--spacing-unit) * 2);
+  font: var(--navigation-font);
+  background-color: rgb(var(--secondary-medium-col));
+  color: #fff;
+}
