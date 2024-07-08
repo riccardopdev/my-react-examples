@@ -4,6 +4,7 @@ import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
 import ErrorMessage from '../components/ErrorMessage';
+import Todo from '../components/Todo';
 
 const TodosPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -49,10 +50,13 @@ const TodosPage = () => {
   const renderTodos = () => {
     return state.todos.map((todo) => {
       return (
-        <article className="gridItem grid-s-span6 grid-xxl-span4">
-          <h2>{todo.title}</h2>
-          <p>{todo.completed ? 'Completed' : 'Need action'}</p>
-        </article>
+        <Todo
+          key={todo.id}
+          userId={todo.userId}
+          id={todo.id}
+          title={todo.title}
+          completed={todo.completed}
+        />
       );
     });
   };
