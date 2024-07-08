@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext, useCallback } from 'react';
-import { ErrorType } from '../types/ErrorType';
+import Loading from '../components/Loading';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
+import { ErrorType } from '../types/ErrorType';
 
 const TodosPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -56,7 +57,7 @@ const TodosPage = () => {
   return (
     <main>
       <section className="grid">
-        {loading ? <p>Loading...</p> : null}
+        {loading ? <Loading /> : null}
         {error.isError ? <p>{error.errorMsg}</p> : null}
         {state.todos.length > 0 ? renderTodos() : null}
       </section>

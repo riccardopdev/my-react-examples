@@ -1,7 +1,8 @@
 import { useEffect, useState, useContext, useCallback } from 'react';
-import { ErrorType } from '../types/ErrorType';
+import Loading from '../components/Loading';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from './../reducer/Actions';
+import { ErrorType } from '../types/ErrorType';
 
 const PhotosPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -59,7 +60,7 @@ const PhotosPage = () => {
   return (
     <main>
       <section className="grid">
-        {loading ? <p>Loading...</p> : null}
+        {loading ? <Loading message="Loading photos..." /> : null}
         {error.isError ? <p>{error.errorMsg}</p> : null}
         {state.photos.length > 0 ? renderPhotos() : null}
       </section>
