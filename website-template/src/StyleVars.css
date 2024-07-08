@@ -1,7 +1,21 @@
 :root {
-  --dark-bg: 2, 53, 53;
-  --medium-bg: 1, 89, 88;
-  --light-bg: 0, 143, 140;
+  /* Colors */
+  --primary-dark-col: 242, 68, 5;
+  --primary-medium-col: 250, 127, 8;
+  --secondary-dark-col: 52, 136, 136;
+  --secondary-medium-col: 34, 186, 187;
+  --secondary-light-col: 158, 248, 238;
 
+  /* Spacing */
   --spacing-unit: 8px;
+
+  /* Fonts */
+  --heading-font: 'Shrikhand', serif;
+  --body-font: 'Mulish', sans-serif;
+  --navigation-font: 600 1.8rem/1.8rem var(--heading-font);
+
+  /* Index */
+  --zindex-top: 150;
+  --zindex-medium: 100;
+  --zindex-bottom: 50;
 }
