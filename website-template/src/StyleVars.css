@@ -1,5 +1,7 @@
 :root {
   /* Colors */
+  --dark-col: 0, 0, 0;
+  --light-col: 255, 255, 255;
   --primary-dark-col: 242, 68, 5;
   --primary-medium-col: 250, 127, 8;
   --secondary-dark-col: 52, 136, 136;
@@ -12,7 +14,7 @@
   /* Fonts */
   --heading-font: 'Shrikhand', serif;
   --body-font: 'Mulish', sans-serif;
-  --navigation-font: 600 1.8rem/1.8rem var(--heading-font);
+  --navigation-font: 2rem/2rem var(--heading-font);
 
   /* Index */
   --zindex-top: 150;

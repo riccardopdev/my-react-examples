@@ -1,5 +1,6 @@
 .nav {
-  background-color: rgb(var(--dark-bg));
+  background-color: rgb(var(--primary-dark-col));
+  font: var(--navigation-font);
   color: #fff;
   margin-bottom: calc(var(--spacing-unit) * 4);
 }
