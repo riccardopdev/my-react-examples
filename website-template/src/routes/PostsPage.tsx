@@ -2,6 +2,7 @@ import { useState, useEffect, useContext, useCallback } from 'react';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
+import Post from '../components/Post';
 
 const PostsPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -47,10 +48,12 @@ const PostsPage = () => {
   const renderPosts = () => {
     return state.posts.map((post) => {
       return (
-        <article key={post.id} className="gridItem grid-s-span6 grid-xxl-span4">
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </article>
+        <Post
+          id={post.id}
+          title={post.title}
+          body={post.body}
+          userId={post.userId}
+        />
       );
     });
   };

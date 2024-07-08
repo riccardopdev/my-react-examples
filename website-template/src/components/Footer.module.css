@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: calc(var(--spacing-unit) * 2);
-  font: var(--navigation-font);
+  padding: calc(var(--spacing-unit) * 4);
   background-color: rgb(var(--secondary-medium-col));
   color: #fff;
 }

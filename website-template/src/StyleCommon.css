@@ -10,6 +10,10 @@
   min-height: 100vh;
 }
 
+body {
+  font-family: var(--body-font);
+}
+
 main {
   flex: 1;
   width: 80%;
@@ -20,25 +24,27 @@ section {
   margin: calc(var(--spacing-unit) * 6) auto;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
-  font-size: 2.4rem;
   margin-bottom: calc(var(--spacing-unit) * 2);
   color: rgb(var(--secondary-dark-col));
+}
+
+h1 {
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-family: var(--heading-font);
-  font-size: 1.8rem;
-  margin-bottom: calc(var(--spacing-unit) * 2);
-  color: rgb(var(--secondary-dark-col));
+  font-size: 2.6rem;
 }
 
 h3 {
-  font-family: var(--heading-font);
-  font-size: 1.2rem;
-  margin-bottom: calc(var(--spacing-unit) * 2);
-  color: rgb(var(--secondary-dark-col));
+  font-size: 2rem;
 }
 
 p {
@@ -70,12 +76,23 @@ ol {
 label {
   display: block;
   font-family: var(--body-font);
+  font-weight: 800;
   margin-bottom: var(--spacing-unit);
 }
 
 input,
 textarea {
   margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+button {
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  color: rgb(var(--light-col));
+  border: none;
+  border-radius: calc(var(--spacing-unit) * 0.5);
+  background-color: rgb(var(--secondary-medium-col));
 }
 
 /* Grid */

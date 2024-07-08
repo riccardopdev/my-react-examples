@@ -3,7 +3,7 @@ import st from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={st.footer}>
-      <p>Some content for the footer.</p>
+      <div>Some content for the footer.</div>
     </footer>
   );
 };
