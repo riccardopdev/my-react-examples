@@ -24,25 +24,28 @@ const HomePage = () => {
         <h2>Features:</h2>
         <ul>
           <li>
-            <p>TypeScript</p>
+            <p>TypeScript.</p>
           </li>
           <li>
-            <p>React Router Dom using the Data API</p>
+            <p>React Router Dom using the Data API.</p>
           </li>
           <li>
-            <p>React Reducer and Context</p>
+            <p>React Reducer and Context for state management.</p>
           </li>
           <li>
             <p>
-              Google Analytic GA4 and usePageTracking hook (requires to replace
-              GA code in index.html)
+              Google Analytics GA4: Integration with GA4, including a
+              usePageTracking hook (requires replacing the GA code in
+              index.html).
             </p>
           </li>
           <li>
-            <p>CSS Modules</p>
+            <p>CSS Modules: Modular and scoped CSS for components.</p>
           </li>
           <li>
-            <p>Global CSS for reset rules, common rules, and variables</p>
+            <p>
+              Global CSS: Includes reset rules, common rules, and variables.
+            </p>
           </li>
         </ul>
       </section>
