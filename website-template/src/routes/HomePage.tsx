@@ -53,14 +53,14 @@ const HomePage = () => {
         <h2>Folder structure:</h2>
         <ul>
           <li>
-            <h3>components</h3>
+            <h4>components</h4>
             <p>
               Contains and organizes all React components created for the
               website.
             </p>
           </li>
           <li>
-            <h3>context</h3>
+            <h4>context</h4>
             <p>
               Contains the <code>DataContext</code> file, which, in combination
               with the reducer, provides <code>state</code> and{' '}
@@ -69,22 +69,28 @@ const HomePage = () => {
             </p>
           </li>
           <li>
-            <h3>reducer</h3>
+            <h4>hooks</h4>
+            <p>
+              Contains custom hooks: <code>usePageTracking</code>.
+            </p>
+          </li>
+          <li>
+            <h4>reducer</h4>
             <p>
               Contains the <code>reducer</code> and <code>actions</code> used to
               modify and update the state.
             </p>
           </li>
           <li>
-            <h3>routes</h3>
+            <h4>routes</h4>
             <p>Contains all the routes (pages) featured in the website.</p>
           </li>
           <li>
-            <h3>state</h3>
+            <h4>state</h4>
             <p>Contains the initial application's state.</p>
           </li>
           <li>
-            <h3>types</h3>
+            <h4>types</h4>
             <p>
               Contains all the TypeScript types utilized in different parts of
               the application.
