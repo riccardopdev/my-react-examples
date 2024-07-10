@@ -1,9 +1,12 @@
 import { FormEvent, useRef, useState } from 'react';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
+import usePageTracking from '../hooks/GA4/usePageTracking';
 import { ErrorType } from '../types/ErrorType';
 
 const CreatePostPage = () => {
+  usePageTracking('Create Post Page');
+
   const postTitle = useRef<HTMLInputElement>(null);
   const postBody = useRef<HTMLTextAreaElement>(null);
   const postUserId = useRef<HTMLInputElement>(null);

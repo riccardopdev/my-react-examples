@@ -1,4 +1,8 @@
+import usePageTracking from '../hooks/GA4/usePageTracking';
+
 const HomePage = () => {
+  usePageTracking('Home Page');
+
   return (
     <main>
       <section>

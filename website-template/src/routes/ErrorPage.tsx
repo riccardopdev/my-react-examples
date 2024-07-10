@@ -1,6 +1,9 @@
 import { useRouteError } from 'react-router-dom';
+import usePageTracking from '../hooks/GA4/usePageTracking';
 
 const ErrorPage = () => {
+  usePageTracking('Error Page');
+
   const error = useRouteError() as Error;
 
   return (

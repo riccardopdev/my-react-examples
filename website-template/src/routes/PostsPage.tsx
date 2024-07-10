@@ -2,11 +2,14 @@ import { useState, useEffect, useContext, useCallback } from 'react';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import Post from '../components/Post';
+import usePageTracking from '../hooks/GA4/usePageTracking';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
 
 const PostsPage = () => {
+  usePageTracking('Posts Page');
+
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<ErrorType>({
     isError: false,

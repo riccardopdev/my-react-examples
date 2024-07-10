@@ -1,12 +1,15 @@
 import { useState, useEffect, useContext, useCallback } from 'react';
 import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
+import Todo from '../components/Todo';
+import usePageTracking from '../hooks/GA4/usePageTracking';
 import { DataContext } from '../context/DataContext';
 import ACTIONS from '../reducer/Actions';
 import { ErrorType } from '../types/ErrorType';
-import ErrorMessage from '../components/ErrorMessage';
-import Todo from '../components/Todo';
 
 const TodosPage = () => {
+  usePageTracking('Todos Page');
+
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<ErrorType>({
     isError: false,
