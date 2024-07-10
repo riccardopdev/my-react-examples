@@ -6,12 +6,12 @@ The objective of this project is to demonstrate one of many typical setup for a 
 
 ## Features:
 
-- TypeScript
-- React Router Dom using the Data API
-- React Reducer and Context
-- Google Analytic GA4 and usePageTracking hook (requires to replace GA code in index.html)
-- CSS Modules
-- Global CSS for reset rules, common rules, and variables
+- TypeScript.
+- React Router Dom using the Data API.
+- React Reducer and Context for state management.
+- Google Analytics GA4: Integration with GA4, including a usePageTracking hook (requires replacing the GA code in index.html).
+- CSS Modules: Modular and scoped CSS for components.
+- Global CSS: Includes reset rules, common rules, and variables.
 
 ## Folder structure:
 
