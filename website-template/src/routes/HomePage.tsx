@@ -21,6 +21,32 @@ const HomePage = () => {
         </p>
       </section>
       <section>
+        <h2>Features:</h2>
+        <ul>
+          <li>
+            <p>TypeScript</p>
+          </li>
+          <li>
+            <p>React Router Dom using the Data API</p>
+          </li>
+          <li>
+            <p>React Reducer and Context</p>
+          </li>
+          <li>
+            <p>
+              Google Analytic GA4 and usePageTracking hook (requires to replace
+              GA code in index.html)
+            </p>
+          </li>
+          <li>
+            <p>CSS Modules</p>
+          </li>
+          <li>
+            <p>Global CSS for reset rules, common rules, and variables</p>
+          </li>
+        </ul>
+      </section>
+      <section>
         <h2>Folder structure:</h2>
         <ul>
           <li>
