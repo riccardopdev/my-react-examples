@@ -9,7 +9,7 @@ The objective of this project is to demonstrate one of many typical setup for a 
 - TypeScript
 - React Router Dom using the Data API
 - React Reducer and Context
-- Google Analytic GA4 and usePageTracking hook
+- Google Analytic GA4 and usePageTracking hook (requires to replace GA code in index.html)
 - CSS Modules
 - Global CSS for reset rules, common rules, and variables
 
