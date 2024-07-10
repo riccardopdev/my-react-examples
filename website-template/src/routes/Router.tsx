@@ -6,6 +6,7 @@ import PhotosPage from './PhotosPage';
 import TodosPage from './TodosPage';
 import CreatePostPage from './CreatePostPage';
 import ErrorPage from './ErrorPage';
+import NotFoundPage from './NotFoundPage';
 
 const Router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const Router = createBrowserRouter([
       { path: '/photos', element: <PhotosPage /> },
       { path: '/todos', element: <TodosPage /> },
       { path: '/createpost', element: <CreatePostPage /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ]);
