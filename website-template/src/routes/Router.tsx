@@ -4,7 +4,7 @@ import HomePage from './HomePage';
 import PostsPage from './PostsPage';
 import PhotosPage from './PhotosPage';
 import TodosPage from './TodosPage';
-import CreatePost from './CreatePost';
+import CreatePostPage from './CreatePostPage';
 import ErrorPage from './ErrorPage';
 
 const Router = createBrowserRouter([
@@ -17,7 +17,7 @@ const Router = createBrowserRouter([
       { path: '/posts', element: <PostsPage /> },
       { path: '/photos', element: <PhotosPage /> },
       { path: '/todos', element: <TodosPage /> },
-      { path: '/createpost', element: <CreatePost /> },
+      { path: '/createpost', element: <CreatePostPage /> },
     ],
   },
 ]);

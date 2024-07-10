@@ -3,7 +3,7 @@ import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import { ErrorType } from '../types/ErrorType';
 
-const CreatePost = () => {
+const CreatePostPage = () => {
   const postTitle = useRef<HTMLInputElement>(null);
   const postBody = useRef<HTMLTextAreaElement>(null);
   const postUserId = useRef<HTMLInputElement>(null);
@@ -115,4 +115,4 @@ const CreatePost = () => {
   );
 };
 
-export default CreatePost;
+export default CreatePostPage;
