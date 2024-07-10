@@ -2,7 +2,16 @@
 
 ## Objective:
 
-The objective of this project is to demonstrate one of many typical setup for a React website using react-router-dom to manage routes, and a combination of React's reducer and context API to manage the state. The website uses the JSONPlaceholder API to handle data requests. Styling is implemented using CSS modules for each component, as well as a global CSS reset, common styles, and CSS variables.
+The objective of this project is to demonstrate one of many typical setup for a React website using react-router-dom to manage routes, and a combination of React's reducer and context API to manage the state. The website uses the JSONPlaceholder API to handle data requests. Styling is implemented using CSS modules for each component, as well as global CSS reset, common styles, and CSS variables.
+
+## Features:
+
+- TypeScript
+- React Router Dom using the Data API
+- React Reducer and Context
+- Google Analytic GA4 and usePageTracking hook
+- CSS Modules
+- Global CSS for reset rules, common rules, and variables
 
 ## Folder structure:
 
@@ -14,19 +23,23 @@ The objective of this project is to demonstrate one of many typical setup for a 
 
 - Contains the `DataContext` file, which, in combination with the reducer, provides `state` and `dispatch` to the application to manage and consume state data.
 
-3. **reducer**:
+3. **hooks**
+
+- Contains custom hooks: `usePageTracking`
+
+4. **reducer**:
 
 - Contains the reducer and actions used to modify and update the state.
 
-4. **routes**:
+5. **routes**:
 
 - Contains all the routes (pages) featured in the website.
 
-5. **state**:
+6. **state**:
 
 - Contains the initial application's state.
 
-6. **types**:
+7. **types**:
 
 - Contains all the TypeScript types utilized in different parts of the application.
 
