@@ -25,7 +25,7 @@ The objective of this project is to demonstrate one of many typical setup for a 
 
 3. **hooks**
 
-- Contains custom hooks: `usePageTracking`
+- Contains custom hooks: `usePageTracking`.
 
 4. **reducer**:
 
